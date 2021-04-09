@@ -22,7 +22,7 @@ git clone https://github.com/jerry-hall/SRE-Intro-BCS-Hacks-2021
 cd SRE-Intro-BCS-Hacks-2021/hello-world-app
 
 sudo npm i
-sudo npm server.js
+sudo node server.js
 
 # Faster way to install on Ubuntu is below. Note, I used the long way to illustrate frustrating deployment
 # without automation
