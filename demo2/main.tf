@@ -10,8 +10,8 @@ provider "aws" {
 
 terraform {
   backend "local" {
-    # For the purposes of this demo, I'm storing the Terraform state locally.
-    # It is HIGHLY recommended in organizations to store state in the cloud,
+    # For the purposes of this demo, we will store the Terraform state locally.
+    # It is HIGHLY recommended to store Terraform state in the cloud,
     # i.e. in S3 or GCS
     path = "./terraform.tfstate"    
   }

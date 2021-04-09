@@ -1,3 +1,4 @@
+# Application Load Balancer is the single source of ingress 
 resource "aws_lb" "BCS_Hacks_demo_alb" {
   name              = "BCS-Hacks-demo-alb"
   security_groups   = [ aws_security_group.BCS_Hacks_sg.id ]
@@ -9,6 +10,7 @@ resource "aws_lb" "BCS_Hacks_demo_alb" {
   ]
 }
 
+# Load Balancer Target Group connects the ALB with the ASG 
 resource "aws_lb_target_group" "front_end" {
   name     = "BCS-Hacks-demo-target-group"
   port     = 80
@@ -26,6 +28,7 @@ resource "aws_lb_target_group" "front_end" {
   }
 }
 
+# Load Balancer Listener connects the target group with the ALB
 resource "aws_lb_listener" "front_end" {
   load_balancer_arn = aws_lb.BCS_Hacks_demo_alb.arn
   port              = "80"

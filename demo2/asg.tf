@@ -1,3 +1,7 @@
+# Autoscaling Group: 
+# For this demo, we won't get into autoscaling policies. Some cool things you can do with this is
+# to define conditions (i.e. High CPU usage) whereby the ASG will launch new instances to meet
+# load.
 resource "aws_autoscaling_group" "BCS_Hacks_demo_asg" {
   name                 = "BCS-Hacks-demo-asg"
   min_size             = "2"
@@ -20,6 +24,7 @@ resource "aws_autoscaling_group" "BCS_Hacks_demo_asg" {
   }
 }
 
+# Launch Configuration is a "template" by which the ASG launches new instances
 resource "aws_launch_configuration" "BCS_Hacks_demo_lc" {
   name          = "BCS-Hacks-demo-lc"
   image_id      = data.aws_ami.ubuntu.id

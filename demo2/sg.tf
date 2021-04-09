@@ -3,6 +3,7 @@ resource "aws_security_group" "BCS_Hacks_sg" {
   description = "Allow http and ssh inbound traffic"
   vpc_id      = aws_vpc.bcs_hacks_demo_vpc.id
 
+  # Whitelist ingress on port 80 (HTTP) from anywhere
   ingress {
     description = "http from internet"
     from_port   = 80
@@ -11,6 +12,7 @@ resource "aws_security_group" "BCS_Hacks_sg" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
+  # Whitelist ingress on port 22 (SSH) from anywhere
   ingress {
     description = "ssh from internet"
     from_port   = 22
@@ -19,6 +21,7 @@ resource "aws_security_group" "BCS_Hacks_sg" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
+  # Whitelist egress on all ports to anywhere
   egress {
     description = "allow all outbound traffic"
     from_port   = 0

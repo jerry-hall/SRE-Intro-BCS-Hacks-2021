@@ -1,5 +1,5 @@
 # A data object retrieves data from a source.
-# In this particular case, we are searching for a specific AMI.
+# In this particular case, we are searching for the Ubuntu 18.04 AMI by Canonical.
 data "aws_ami" "ubuntu" {
   most_recent = true
 
@@ -16,6 +16,7 @@ data "aws_ami" "ubuntu" {
   owners = ["099720109477"]     # Canonical
 }
 
+# This section is commented out as it is replaced by the ASG and LC
 # For more info, see: 
 # https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance
 # resource "aws_instance" "bcs_hacks_ec2_instance" {
