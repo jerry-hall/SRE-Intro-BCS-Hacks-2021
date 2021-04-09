@@ -10,6 +10,7 @@ resource "aws_autoscaling_group" "BCS_Hacks_demo_asg" {
   force_delete         = false
   launch_configuration = aws_launch_configuration.BCS_Hacks_demo_lc.name
 
+  # Note: ASG's require a minimum of two subnets (this is an AWS policy)
   vpc_zone_identifier = [
     aws_subnet.bcs_hacks_demo_subnet_1.id,
     aws_subnet.bcs_hacks_demo_subnet_2.id,
