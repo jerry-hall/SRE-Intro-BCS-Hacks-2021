@@ -31,7 +31,8 @@ resource "aws_launch_configuration" "BCS_Hacks_demo_lc" {
   image_id      = data.aws_ami.ubuntu.id
   instance_type = "t2.micro"
   user_data     = file("user_data.sh")
-  # Note: You must create your own SSH key in AWS in order to SSH in to the instance
+  # Note: You must create your own SSH key in AWS in order to SSH in to the instance.
+  # Replace this with the name of your own SSH key.
   key_name      = "jhall-dev-env"
   security_groups = [ aws_security_group.BCS_Hacks_sg.id ]
 }
