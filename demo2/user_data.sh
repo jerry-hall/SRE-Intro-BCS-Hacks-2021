@@ -4,7 +4,7 @@
 
 # Install Node and npm
 sudo apt update
-sudo apt install nodejs npm -y
+sudo apt install npm -y
 
 # Bootstrap Hello-World-App
 mkdir /data
