@@ -1,5 +1,12 @@
-# SRE-Intro-BCS-Hacks-2021
-Intro to Site Reliability Engineering Workshop at BCS Hacks 2021
+# Intro to Site Reliability Engineering 
+Introduction to DevOps and Site Reliability Engineering workshop presented at BCS Hack 2021.
+
+## Overview 
+Covered in this workshop:
+- Basics of DevOps and Site Reliability Engineering 
+- Deployment of an Express.js server on an Amazon EC2 instance 
+- Automated deployment using Terraform Infrastructure-as-Code
+- Architecture of a multi-node EC2 instance cluster running behind an Application Load Balancer (ALB)
 
 ## Video Recording
 Part 1: 
